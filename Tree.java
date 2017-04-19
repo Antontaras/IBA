@@ -9,13 +9,18 @@
 import static jdk.nashorn.internal.objects.Global.print;
 
 
-    class Tree {
-
+   public class Tree {
+        /**
+         * add comments documentation
+         *
+         */
         int height;
+
         Tree() {
             print("Planting a seedling");
             height = 0;
         }
+
         Tree(int initialHeight) {
             height = initialHeight;
             print("Creating new Tree that is " + height + " feet tall");
@@ -29,17 +34,24 @@ import static jdk.nashorn.internal.objects.Global.print;
             print(s + ": Tree is " + height + " feet tall");
         }
 
+    }
 
-  //  public class Overloading {
+
+    class Overloading {
 
 
         public static void main(String[] args) {
-            for(int i = 0; i < 5; i++) {
+            for (int i = 0; i < 5; i++) {
                 Tree t = new Tree(i);
+
+                t.info();
+                t.info("overloaded method");
             }
-          //  t.info();
-           // t.info("overloaded method");
+            /**
+             *  Overloaded constructor:
+              */
+
+            new Tree();
         }
-        // Overloaded constructor:     new Tree();
 }
 
